@@ -1,0 +1,313 @@
+  :root {
+            --neon-blue: #00FFFF;
+            --electric-purple: #A020F0;
+            --dark-bg: #000000;
+            --card-bg: #0a0a0a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --accent-green: #00ff88;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Neon Text Effects */
+        .neon-text {
+            color: var(--neon-blue);
+            text-shadow: 
+                0 0 5px var(--neon-blue),
+                0 0 10px var(--neon-blue),
+                0 0 15px var(--neon-blue),
+                0 0 20px var(--electric-purple);
+        }
+
+        .neon-purple {
+            color: var(--electric-purple);
+            text-shadow: 
+                0 0 5px var(--electric-purple),
+                0 0 10px var(--electric-purple),
+                0 0 15px var(--electric-purple);
+        }
+
+        .neon-green {
+            color: var(--accent-green);
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        /* Glowing Borders */
+        .glow-border {
+            border: 1px solid transparent;
+            background: linear-gradient(45deg, var(--neon-blue), var(--electric-purple));
+            background-clip: padding-box;
+            box-shadow: 
+                0 0 10px var(--neon-blue),
+                inset 0 0 10px rgba(0, 255, 255, 0.1);
+        }
+
+        /* Typewriter Effect */
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid var(--neon-blue);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--neon-blue) }
+        }
+
+        /* Hover Glow Effects */
+        .glow-hover {
+            transition: all 0.3s ease;
+        }
+
+        .glow-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 0 15px var(--neon-blue),
+                0 0 30px var(--neon-blue);
+        }
+
+        /* Card Animations */
+        .card-glow {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-glow:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.3),
+                inset 0 0 20px rgba(0, 255, 255, 0.1);
+            transform: translateY(-10px);
+        }
+
+        /* Section Spacing */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        /* Background Animation */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(160, 32, 240, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
+            animation: backgroundShift 10s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Progress Bar Animation */
+        .progress {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 8px;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--neon-blue), var(--electric-purple));
+            transition: width 2s ease-in-out;
+        }
+
+        /* Social Icons Animation */
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .social-icon:hover {
+            color: var(--neon-blue);
+            transform: scale(1.2);
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--neon-blue), var(--electric-purple));
+            border-radius: 10px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: rgba(0,0,0,0.9) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--text-primary) !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--neon-blue) !important;
+        }
+
+        /* Profile Image */
+        .profile-image-wrapper img {
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, var(--neon-blue), var(--electric-purple)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        /* Custom Buttons */
+        .btn-outline-neon {
+            border-color: var(--neon-blue);
+            color: var(--neon-blue);
+        }
+
+        .btn-outline-neon:hover {
+            background-color: var(--neon-blue);
+            color: var(--dark-bg);
+        }
+
+        .btn-gradient {
+            background: linear-gradient(45deg, var(--neon-blue), var(--electric-purple));
+            border: none;
+            color: var(--dark-bg);
+            font-weight: bold;
+        }
+
+        .btn-green {
+            background: var(--accent-green);
+            border: none;
+            color: var(--dark-bg);
+            font-weight: bold;
+        }
+
+        /* Form Styles */
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid var(--neon-blue) !important;
+            color: var(--text-primary) !important;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 10px var(--neon-blue) !important;
+            border-color: var(--neon-blue) !important;
+        }
+
+        /* Modal Styles */
+        .modal-content {
+            background-color: var(--card-bg);
+            border: 1px solid var(--neon-blue);
+        }
+
+        .modal-header {
+            border-bottom: 1px solid var(--neon-blue);
+        }
+
+        .modal-footer {
+            border-top: 1px solid var(--neon-blue);
+        }
+
+        /* Project Card Styles */
+        .project-card {
+            transition: all 0.4s ease;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0,255,255,0.2), rgba(160,32,240,0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .tech-badge {
+            background: rgba(0, 255, 255, 0.2);
+            color: var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+            margin: 2px;
+            font-size: 0.8rem;
+        }
+
+        .project-btn {
+            margin: 5px;
+        }
